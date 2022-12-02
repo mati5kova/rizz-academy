@@ -21,7 +21,7 @@ export default function Section({ title, content, id }: SectionProps) {
                 <img
                     src={MasterImage}
                     alt="Master Image"
-                    width={'200px'}
+                    width={'250px'}
                     height={'auto'}
                     aos-init="true"
                     data-aos-once="false"

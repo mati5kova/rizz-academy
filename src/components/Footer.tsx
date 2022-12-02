@@ -46,7 +46,7 @@ export default function Footer() {
     return (
         <footer className={classes.footer}>
             <Container className={classes.inner}>
-                <img src={logo} alt="LOGO" className="logo" />
+                <img src={logo} alt="LOGO" className="logo-footer" />
                 <div className="newsletter">
                     <input
                         className={error ? 'error' : ''}

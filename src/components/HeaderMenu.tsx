@@ -54,7 +54,7 @@ const useStyles = createStyles((theme) => ({
         marginRight: 5,
     },
 
-    purchaseButton: {
+    /* purchaseButton: {
         height: 32,
         width: 120,
         backgroundColor: '#859398',
@@ -63,7 +63,7 @@ const useStyles = createStyles((theme) => ({
         },
         margin: 0,
         padding: 0,
-    },
+    }, */
 
     //odstrani default <a> styling
     anchor: {
@@ -141,7 +141,7 @@ export default function HeaderMenu({ links }: HeaderActionProps) {
                 <Group spacing={1} className={classes.links}>
                     {items}
                 </Group>
-                <Button radius="xl" className={classes.purchaseButton} onClick={() => routeChange('purchase')}>
+                <Button radius="xl" className={`purchase-button`} onClick={() => routeChange('purchase')}>
                     <a className={classes.anchor} href="/purchase">
                         purchase
                     </a>
@@ -149,23 +149,4 @@ export default function HeaderMenu({ links }: HeaderActionProps) {
             </Container>
         </Header>
     );
-}
-
-{
-    /* <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }} className={`linear-gradient-background-color ${scrollDirection === 'down' ? 'down' : 'up'}`}>
-            <Container className={`${classes.inner}`} fluid>
-                <Group>
-                    <img src={logo} alt="LOGO" className="logo" height="150px" />
-                    <Burger opened={opened} onClick={handleBurgerClick} className={classes.burger} size="md"></Burger>
-                </Group>
-                <Group spacing={5} className={classes.links}>
-                    {items}
-                </Group>
-                <Button radius="xl" className={classes.purchaseButton} onClick={() => routeChange('purchase')}>
-                    <a className={classes.anchor} href="/purchase">
-                        purchase
-                    </a>
-                </Button>
-            </Container>
-        </Header> */
 }

@@ -26,6 +26,24 @@
 }
 
 @media (max-width: 425px) {
+    .logo {
+        margin-left: 6rem;
+    }
+    section {
+        min-height: 110vh;
+    }
+
+    section > h5 {
+        font-size: 1.9rem;
+        margin-bottom: 1.5rem;
+        margin-top: 5rem;
+    }
+    section > div.content {
+        max-width: 85%;
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+
     .title-div > p {
         font-size: 2.5rem;
         width: 250px;
@@ -47,10 +65,22 @@
         padding: 0;
     }
     .student-name {
-        margin: 0;
+        margin-bottom: 2rem;
     }
     .student-description {
         font-size: 1.5rem;
         line-height: 1.2rem;
+    }
+
+    .newsletter {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .newsletter > input {
+        width: 60%;
+        position: relative;
+        top: 0px;
     }
 }

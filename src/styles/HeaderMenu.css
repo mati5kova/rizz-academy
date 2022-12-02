@@ -1,9 +1,15 @@
-.header-logo {
-    position: absolute;
-    left: 5rem;
-}
 .logo {
     margin-left: 0rem; /*v responsive design del specifično za različne širine*/
+}
+.purchase-button {
+    height: 32px;
+    width: 120px;
+    background-color: #859398;
+    margin: 0;
+    padding: 0;
+}
+.purchase-button:hover {
+    background-color: #9dacb1;
 }
 
 header {
