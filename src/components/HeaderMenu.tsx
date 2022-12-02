@@ -54,17 +54,6 @@ const useStyles = createStyles((theme) => ({
         marginRight: 5,
     },
 
-    /* purchaseButton: {
-        height: 32,
-        width: 120,
-        backgroundColor: '#859398',
-        '&:hover': {
-            backgroundColor: '#9dacb1',
-        },
-        margin: 0,
-        padding: 0,
-    }, */
-
     //odstrani default <a> styling
     anchor: {
         color: 'inherit',
@@ -125,18 +114,23 @@ export default function HeaderMenu({ links }: HeaderActionProps) {
                 <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                     <ul className="nav-menu-items" onClick={() => handleBurgerClick()}>
                         <li className="nav-text">
-                            <a>about</a>
+                            <Link to="about-section" duration={1500} smooth="true" href={'#' + 'about-section'} onClick={handleBurgerClick}>
+                                about
+                            </Link>
                         </li>
                         <li className="nav-text">
-                            <a>students</a>
+                            <Link to="master-section" duration={2100} smooth="true" href={'#' + 'master-section'}>
+                                students
+                            </Link>
                         </li>
                         <li className="nav-text">
-                            <a>master</a>
+                            <Link to="students-section" duration={2600} smooth="true" href={'#' + 'students-section'}>
+                                master
+                            </Link>
                         </li>
                     </ul>
                 </nav>
 
-                {/* https://github.com/briancodex/react-sidebar-v1/tree/master/src/components */}
                 <img src={logo} alt="LOGO" className="logo" height="150px" />
                 <Group spacing={1} className={classes.links}>
                     {items}
