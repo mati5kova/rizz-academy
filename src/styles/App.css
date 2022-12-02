@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Quantum';
+    src: url(../assets/Quantum.otf);
+    font-style: normal;
+    /*font-family: 'Quantum'; ->*/
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    /*background color za body je v htmlju*/
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+}
+
+.linear-gradient-background-color {
+    background: #283048;
+    background: -moz-linear-gradient(left, #859398, #283048);
+    background: -webkit-linear-gradient(left, #859398, #283048);
+    background: repeating-linear-gradient(to right, #859398, #283048) no-repeat fixed;
+}

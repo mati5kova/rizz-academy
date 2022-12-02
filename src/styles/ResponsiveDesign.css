@@ -1,0 +1,56 @@
+/* Landscape phones and down */
+/* @media (max-width: 480px) { ... } */
+
+/* Portrait tablet to landscape and desktop */
+/* @media (min-width: 768px) and (max-width: 979px) { ... } */
+
+/* Large desktop */
+/* @media (min-width: 1200px) { ... } */
+
+@media (min-width: 1200px) {
+    /*večji 2 besedi v main titlu*/
+    .title-div > p {
+        font-size: 4.5rem;
+    }
+    /*podnaslovi -about... */
+    section > h5 {
+        font-size: 4.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .title-div > p {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .title-div > p {
+        font-size: 2.5rem;
+        width: 250px;
+        margin-bottom: 0;
+    }
+    .two {
+        font-size: 50px;
+        margin: 0.5rem 0 1rem 0;
+    }
+    .title-div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .student {
+        min-height: 50vh;
+        padding: 0;
+    }
+    .student-name {
+        margin: 0;
+    }
+    .student-description {
+        font-size: 1.5rem;
+        line-height: 1.2rem;
+    }
+}
