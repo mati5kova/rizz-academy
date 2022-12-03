@@ -50,7 +50,7 @@ const useStyles = createStyles((theme) => ({
     },
 }));
 
-const success = () => {
+const Success = () => {
     const { classes } = useStyles();
     const [routeChange] = navigateToPage();
 
@@ -83,4 +83,4 @@ const success = () => {
         </Container>
     );
 };
-export default success;
+export default Success;
