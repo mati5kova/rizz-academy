@@ -60,7 +60,7 @@ export default function Footer() {
             <Container className={classes.inner}>
                 <img src={logo} alt="LOGO" className="logo-footer" />
                 <div className="newsletter">
-                    <form data-netlify="true" method="post" name="Newsletter" id="newsletter-form" action="/success">
+                    <form data-netlify="true" method="post" name="Newsletter" id="newsletter-form" action="/success/">
                         <input type="hidden" name="form-name" value="Newsletter" />
                         <input
                             id="email-input"
