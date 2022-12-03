@@ -52,9 +52,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 useEffect(() => {
-    window.onload = () => {
-        <Navigate to="/success"></Navigate>;
-    };
+    window.location.reload();
 }, []);
 
 const SuccessPage = () => {
