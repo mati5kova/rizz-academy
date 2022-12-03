@@ -51,10 +51,6 @@ const useStyles = createStyles((theme) => ({
     },
 }));
 
-useEffect(() => {
-    window.location.reload();
-}, []);
-
 const SuccessPage = () => {
     const { classes } = useStyles();
     const [routeChange] = navigateToPage();
