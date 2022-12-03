@@ -38,7 +38,7 @@ export default function Footer() {
         setEmail(value);
         setError(false);
     };
-    const handleSubmit = (e: any) => {
+    /* const handleSubmit = (e: any) => {
         e.preventDefault();
         const error = !/^[A-Za-z0-9._%+-]{1,64}@(?:[A-Za-z0-9-]{1,63}\.){1,125}[A-Za-z]{2,63}$/.test(email);
         if (error) {
@@ -51,14 +51,14 @@ export default function Footer() {
                 input.classList.toggle('success');
             }, 1000);
         }
-    };
+    }; */
 
     return (
         <footer className={classes.footer}>
             <Container className={classes.inner}>
                 <img src={logo} alt="LOGO" className="logo-footer" />
                 <div className="newsletter">
-                    <form data-netlify="true" method="POST" name="Newsletter">
+                    <form data-netlify="true" method="post" name="Newsletter">
                         <input type="hidden" name="form-name" value="Newsletter" />
                         <input
                             id="email-input"
@@ -71,9 +71,7 @@ export default function Footer() {
                                 handleChange(e.target.value);
                             }}
                         />
-                        <button type="submit" onClick={(e) => handleSubmit(e)}>
-                            Submit
-                        </button>
+                        <button type="submit">Submit</button>
                     </form>
                 </div>
                 <Group spacing={0} className={classes.links} position="right" noWrap>
