@@ -38,9 +38,19 @@ export default function Footer() {
         setEmail(value);
         setError(false);
     };
-    const handleSubmit = () => {
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
         const error = !/^[A-Za-z0-9._%+-]{1,64}@(?:[A-Za-z0-9-]{1,63}\.){1,125}[A-Za-z]{2,63}$/.test(email);
-        error ? setError(true) : console.log(email);
+        if (error) {
+            setError(true);
+        } else {
+            const input = document.getElementById('email-input') as HTMLInputElement;
+            input.value = '';
+            input.classList.toggle('success');
+            setTimeout(() => {
+                input.classList.toggle('success');
+            }, 1000);
+        }
     };
 
     return (
@@ -48,22 +58,20 @@ export default function Footer() {
             <Container className={classes.inner}>
                 <img src={logo} alt="LOGO" className="logo-footer" />
                 <div className="newsletter">
-                    <form>
+                    <form data-netlify="true" method="POST" name="Newsletter">
+                        <input type="hidden" name="form-name" value="Newsletter" />
                         <input
+                            id="email-input"
+                            name="emailInput"
                             className={error ? 'error' : ''}
-                            type="text"
+                            type="email"
                             placeholder="Your email"
                             value={email}
                             onChange={(e) => {
                                 handleChange(e.target.value);
                             }}
                         />
-                        <button
-                            type="submit"
-                            onClick={() => {
-                                handleSubmit();
-                            }}
-                        >
+                        <button type="submit" onClick={(e) => handleSubmit(e)}>
                             Submit
                         </button>
                     </form>

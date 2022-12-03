@@ -17,7 +17,10 @@
     box-sizing: border-box;
 }
 .newsletter > form > input.error {
-    border: 1.5px solid #fa5252;
+    border: 2px solid #fa5252;
+}
+.newsletter > form > input.success {
+    border: 2px solid #1fad03;
 }
 
 .newsletter > form > button {
