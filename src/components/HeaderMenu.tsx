@@ -119,12 +119,12 @@ export default function HeaderMenu({ links }: HeaderActionProps) {
                             </Link>
                         </li>
                         <li className="nav-text">
-                            <Link to="master-section" duration={2100} smooth="true" href={'#' + 'master-section'}>
+                            <Link to="master-section" duration={2100} smooth="true" href={'#' + 'master-section'} onClick={handleBurgerClick}>
                                 students
                             </Link>
                         </li>
                         <li className="nav-text">
-                            <Link to="students-section" duration={2600} smooth="true" href={'#' + 'students-section'}>
+                            <Link to="students-section" duration={2600} smooth="true" href={'#' + 'students-section'} onClick={handleBurgerClick}>
                                 master
                             </Link>
                         </li>

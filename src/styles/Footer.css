@@ -1,4 +1,4 @@
-.newsletter > input {
+.newsletter > form > input {
     position: relative;
     top: 4px;
     width: 300px;
@@ -16,11 +16,11 @@
     outline: none;
     box-sizing: border-box;
 }
-.newsletter > input.error {
+.newsletter > form > input.error {
     border: 1.5px solid #fa5252;
 }
 
-.newsletter > button {
+.newsletter > form > button {
     position: relative;
     top: 4px;
     height: 40px;
@@ -36,6 +36,6 @@
     outline: none;
     cursor: pointer;
 }
-.newsletter > button:hover {
+.newsletter > form > button:hover {
     background-color: #484c58;
 }

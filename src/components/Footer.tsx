@@ -48,22 +48,25 @@ export default function Footer() {
             <Container className={classes.inner}>
                 <img src={logo} alt="LOGO" className="logo-footer" />
                 <div className="newsletter">
-                    <input
-                        className={error ? 'error' : ''}
-                        type="text"
-                        placeholder="Your email"
-                        value={email}
-                        onChange={(e) => {
-                            handleChange(e.target.value);
-                        }}
-                    />
-                    <button
-                        onClick={() => {
-                            handleSubmit();
-                        }}
-                    >
-                        Submit
-                    </button>
+                    <form>
+                        <input
+                            className={error ? 'error' : ''}
+                            type="text"
+                            placeholder="Your email"
+                            value={email}
+                            onChange={(e) => {
+                                handleChange(e.target.value);
+                            }}
+                        />
+                        <button
+                            type="submit"
+                            onClick={() => {
+                                handleSubmit();
+                            }}
+                        >
+                            Submit
+                        </button>
+                    </form>
                 </div>
                 <Group spacing={0} className={classes.links} position="right" noWrap>
                     <a href="https://www.google.com" target="_blank">

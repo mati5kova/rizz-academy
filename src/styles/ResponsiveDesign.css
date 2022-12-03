@@ -78,9 +78,8 @@
         justify-content: center;
     }
 
-    .newsletter > input {
+    .newsletter > form > input {
         width: 60%;
         position: relative;
-        top: 0px;
     }
 }
