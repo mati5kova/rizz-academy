@@ -1,5 +1,6 @@
 import { Button, Container, createStyles, Group, Text, Title } from '@mantine/core';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Navigate } from 'react-router-dom';
 import navigateToPage from '../utils/navigate';
 
 const useStyles = createStyles((theme) => ({
@@ -49,6 +50,12 @@ const useStyles = createStyles((theme) => ({
         marginBottom: theme.spacing.xl * 1.5,
     },
 }));
+
+useEffect(() => {
+    window.onload = () => {
+        <Navigate to="/success"></Navigate>;
+    };
+}, []);
 
 const SuccessPage = () => {
     const { classes } = useStyles();
