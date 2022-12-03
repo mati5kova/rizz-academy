@@ -3,6 +3,7 @@ import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/
 import React, { useState } from 'react';
 import logo from '../assets/logo_no_bg.png';
 import '../styles/Footer.css';
+import SuccessPage from './SuccessPage';
 
 const useStyles = createStyles((theme) => ({
     footer: {
@@ -60,7 +61,7 @@ export default function Footer() {
             <Container className={classes.inner}>
                 <img src={logo} alt="LOGO" className="logo-footer" />
                 <div className="newsletter">
-                    <form data-netlify="true" method="post" name="Newsletter" id="newsletter-form">
+                    <form data-netlify="true" method="post" name="Newsletter" id="newsletter-form" action="src\components\SuccessPage.tsx">
                         <input type="hidden" name="form-name" value="Newsletter" />
                         <input
                             id="email-input"
