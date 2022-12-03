@@ -38,27 +38,29 @@ export default function Footer() {
         setEmail(value);
         setError(false);
     };
-    /* const handleSubmit = (e: any) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
         const error = !/^[A-Za-z0-9._%+-]{1,64}@(?:[A-Za-z0-9-]{1,63}\.){1,125}[A-Za-z]{2,63}$/.test(email);
         if (error) {
             setError(true);
         } else {
             const input = document.getElementById('email-input') as HTMLInputElement;
+            const form = document.getElementById('newsletter-form') as HTMLFormElement;
+            form.submit();
             input.value = '';
             input.classList.toggle('success');
             setTimeout(() => {
                 input.classList.toggle('success');
             }, 1000);
         }
-    }; */
+    };
 
     return (
         <footer className={classes.footer}>
             <Container className={classes.inner}>
                 <img src={logo} alt="LOGO" className="logo-footer" />
                 <div className="newsletter">
-                    <form data-netlify="true" method="post" name="Newsletter">
+                    <form data-netlify="true" method="post" name="Newsletter" id="newsletter-form">
                         <input type="hidden" name="form-name" value="Newsletter" />
                         <input
                             id="email-input"
