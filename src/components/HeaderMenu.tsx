@@ -84,10 +84,10 @@ export default function HeaderMenu({ links }: HeaderActionProps) {
             case 'about-section':
                 SCROLL_TIME = 1500;
                 break;
-            case 'students-section':
+            case 'master-section':
                 SCROLL_TIME = 2100;
                 break;
-            case 'master-section':
+            case 'students-section':
                 SCROLL_TIME = 2600;
                 break;
             default:
@@ -120,12 +120,12 @@ export default function HeaderMenu({ links }: HeaderActionProps) {
                         </li>
                         <li className="nav-text">
                             <Link to="master-section" duration={2100} smooth="true" href={'#' + 'master-section'} onClick={handleBurgerClick}>
-                                students
+                                master
                             </Link>
                         </li>
                         <li className="nav-text">
                             <Link to="students-section" duration={2600} smooth="true" href={'#' + 'students-section'} onClick={handleBurgerClick}>
-                                master
+                                students
                             </Link>
                         </li>
                     </ul>
